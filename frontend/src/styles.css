@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: #f6f7f9; color: #222; }
+
+.auth-wrap { min-height: 100vh; display: grid; place-items: center; padding: 20px;
+  background: linear-gradient(135deg, #ff8a3d, #ffb84d); }
+.auth-wrap .card { width: 100%; max-width: 380px; }
+
+.card { background: #fff; border-radius: 12px; padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06); margin-bottom: 16px; }
+
+h1, h2, h3, h4 { margin: 0 0 12px; }
+.muted { color: #777; }
+.error { background: #fde8e8; color: #b42318; padding: 10px;
+  border-radius: 8px; margin: 10px 0; }
+
+input { width: 100%; padding: 10px 12px; margin: 6px 0;
+  border: 1px solid #ddd; border-radius: 8px; font-size: 14px; }
+
+button { background: #ff8a3d; color: #fff; border: 0; padding: 10px 16px;
+  border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 8px; }
+button:disabled { background: #ccc; cursor: not-allowed; }
+button.link { background: none; color: #ff8a3d; padding: 4px 8px; }
+
+.app { max-width: 900px; margin: 0 auto; padding: 20px; }
+header { display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.tabs button { background: #fff; color: #555; border: 1px solid #ddd; }
+.tabs button.active { background: #ff8a3d; color: #fff; border-color: #ff8a3d; }
+
+.row { display: flex; gap: 8px; }
+.row input { flex: 1; }
+
+.list { list-style: none; padding: 0; }
+.list li { display: flex; justify-content: space-between; padding: 8px 0;
+  border-bottom: 1px solid #eee; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.recipe-card { background: #fff8f0; padding: 14px; border-radius: 10px; cursor: pointer;
+  border: 1px solid #ffe4c4; transition: transform .1s; }
+.recipe-card:hover { transform: translateY(-2px); }
+
+.stat { background: #fff8f0; padding: 16px; border-radius: 10px; text-align: center; }
+.stat b { display: block; font-size: 22px; color: #ff8a3d; }
+.stat span { font-size: 12px; color: #777; }
