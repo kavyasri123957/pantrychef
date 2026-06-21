@@ -2,15 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Docker Images') {
+
+        stage('Build Frontend Image') {
             steps {
-                sh 'docker compose build'
+                sh 'docker build -t pantrychef-frontend ./frontend'
             }
         }
 
-        stage('Run Containers') {
+        stage('Build Backend Image') {
             steps {
-                sh 'docker compose up -d'
+                sh 'docker build -t pantrychef-backend ./backend'
+            }
+        }
+
+        stage('Verify Images') {
+            steps {
+                sh 'docker images'
             }
         }
     }
