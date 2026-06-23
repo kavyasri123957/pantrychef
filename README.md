@@ -43,3 +43,4 @@ npm run dev            # runs on http://localhost:5173
 
 Open http://localhost:5173 → Sign up → Use the 4 modules.
 CI/CD Auto Trigger Test
+MY NAME IS KAVYA
