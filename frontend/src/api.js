@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL || 'http://52.65.242.252:5000/api';
 
 function token() { return localStorage.getItem('token'); }
 
