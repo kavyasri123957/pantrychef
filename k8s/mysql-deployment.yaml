@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: pantrychef-mysql
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: pantrychef-mysql
+
+  template:
+    metadata:
+      labels:
+        app: pantrychef-mysql
+
+    spec:
+      containers:
+      - name: mysql
+        image: nissankikavya/pantrychef-mysql:latest
+        imagePullPolicy: Always
+
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "root"
+
+        - name: MYSQL_DATABASE
+          value: "pantrychef"
+
+        ports:
+        - containerPort: 3306
+
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: pantrychef-mysql-service
+
+spec:
+  selector:
+    app: pantrychef-mysql
+
+  ports:
+  - port: 3306
+    targetPort: 3306
